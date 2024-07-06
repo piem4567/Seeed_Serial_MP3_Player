@@ -82,7 +82,7 @@ uint8_t WT2605C<T>::playSDRootSong(uint32_t index) {
 
 template <class T>
 uint8_t WT2605C<T>::playSDSong(const char* fileName) {
-    String cmd = String(AT_HEADER AT_CMD_PLAY "=" STORAGE_SD ",") + String(fileName);
+    String cmd = String(AT_HEADER AT_CMD_SPLAY "=" STORAGE_SD ",") + String(fileName);
     _serial->println(cmd);
     return getResult();
 }
